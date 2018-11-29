@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,187 @@
     <title>Projet Facture</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+    <header>
+        <h1>FATURE</h1>
+        <div>
+            <input type="text" placeholder="Nom de la societe"> <br>
+            <input type="text" placeholder="Adresse de la societe"><br>
+            <input type="text" placeholder="Entrer un numero de téléphone"><br>
+            <input type="text" placeholder="Entrer votre adresse email">
+        </div>
+
+        <div>
+            <label>N° DE FACTURE </label> <input type="number" value="01">
+        </div>
+        <div>
+            <label>DATE</label>
+            <!-- jour -->
+            <select name="" id="jour">
+               
+            </select>
+            <!-- mois -->
+            <select name="" id="mois">
+             
+            </select>
+            <!-- année -->
+            <select name="" id="annee">
+               
+            </select>
+        </div>
+
+    </header>
+
+    <section>
+        <div>
+            <h3>A</h3>
+            <select name="" id="">
+                <option>Nouveau client</option>
+                <option>LePoleS</option>
+                <option>Prosevia</option>
+                <option>Microsoft</option>
+                <option>Google</option>
+            </select>
+            <input type="text" disabled placeholder="Nom de la Societe">
+            <input type="text" disabled placeholder="Nom">
+            <input type="text" disabled placeholder="Rue">
+            <input type="text" disabled placeholder="Code Postal, Ville">
+            <input type="text" disabled placeholder="Numéro de téléphone">
+
+
+        </div>
+
+        <div>
+            <h3>EXPEDIER A</h3>
+            <select name="" id="">
+                <option>Nouveau client</option>
+                <option>Mohamed Aarous</option>
+                <option>Assa Traore</option>
+                <option>Sonia Bougamha</option>
+                <option>Anas Yousfi</option>
+            </select>
+            <input type="text" disabled placeholder="Nom de la Societe">
+            <input type="text" disabled placeholder="Nom">
+            <input type="text" disabled placeholder="Rue">
+            <input type="text" disabled placeholder="Code Postal, Ville">
+            <input type="text" disabled placeholder="Numéro de téléphone">
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Détails des produits facturés</h2>
+        <table>
+            <tr>
+                <td>Code Produit</td>
+                <td>Libellé produit</td>
+                <td>Prix - Unitaire en euros</td>
+                <td>Quantité commandée</td>
+                <td>Montant en euros</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <table>
+            <tr>
+                <td>Sous-total</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>t.v.a 20.00%</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Port & manutention</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total du (Total ttc)</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+   <p>N.B Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de : <span>140.4</span>€ répresentant <span>5</span>% de votre commande ci-dessus</p>
+
+   <footer>
+       <p>Veuillez rédiger tous les chèques à l'ordre de <strong>"Nom de la société"</strong> Pour toute question concernant cette facture, veuillez contacter : <span>DUPONT</span> au <strong>01.25.65.78.96</strong> ou à l'adresse <strong>"societe@supportclient.fr"</strong></p>
+       <h3>Nous vous remercions de votre confiance</h3>
+
+       <button>Imprimer cette page</button>
+   </footer>
+
     <script src="../js/facture.js"></script>
 </body>
+
 </html>
