@@ -111,11 +111,17 @@ for(i = 0; i < tableauProduit.length; i++){
 var td = document.getElementsByTagName('td'); 
 console.log(td[0]);
 
+var quantite = document.getElementsByTagName('input');
+
 function remplissage2(element, index, code, libelle, prix, valeur, valeur2) {
     if (element[index].value == code) {
         // remlir le texte de chaque option
         libelle.innerHTML = valeur;
         prix.innerHTML = valeur2;
+        // on est la!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        CalculArticle(Remplace(valeur2), 15, 9);
+        CalculArticle(Remplace(valeur2), 16, 14);
+        CalculArticle(Remplace(valeur2), 17, 19);
     }
   
 }
@@ -127,8 +133,8 @@ function Remplace(i){
     return prix;
 }
 function CalculHT(){
-    var prixHT =  Number(td[9].innerText);+ Number(td[14].innerText) + Number(td[19].innerText);
-    td[21].innerHTML = prixHT;
+    var prixHT =  Number(td[9].innerText) + Number(td[14].innerText) + Number(td[19].innerText);
+    td[21].innerHTML = prixHT.toFixed(2);
     return prixHT;
 }
 
@@ -162,7 +168,6 @@ function CalculHT(){
         Remplace(17);
     }
 
-    var quantite = document.getElementsByTagName('input');
     console.log(quantite[25]);
     console.log(quantite[26]);
     console.log(quantite[27]);
@@ -171,10 +176,11 @@ function CalculHT(){
         var input= quantite[q].value;
         montant = p * input;
         td[i].innerHTML = montant.toFixed(2);
+        console.log(td[i]);
         CalculHT();
         TVA();
-        montantTTC();
         fraisPort();
+        montantTTC();
     }
 
     function TVA(){
@@ -184,23 +190,23 @@ function CalculHT(){
         
     }
 
-    quantite[25].onkeyup = function(){
-        CalculArticle(prix,25, 9);
+    quantite[15].onkeyup = function(){
+        CalculArticle(prix,15, 9);
     }
-    quantite[26].onkeyup = function(){
-        CalculArticle(prix,26, 14);
+    quantite[16].onkeyup = function(){
+        CalculArticle(prix,16, 14);
     }
-    quantite[27].onkeyup = function(){
-        CalculArticle(prix,27, 14);
+    quantite[17].onkeyup = function(){
+        CalculArticle(prix,17, 19);
     }
-    quantite[25].onclick = function(){
-        CalculArticle(prix,25, 19);
+    quantite[15].onclick = function(){
+        CalculArticle(prix,15, 9);
     }
-    quantite[26].onclick = function(){
-        CalculArticle(prix,26, 9);
+    quantite[16].onclick = function(){
+        CalculArticle(prix,16, 14);
     }
-    quantite[27].onclick = function(){
-        CalculArticle(prix,27, 14);
+    quantite[17].onclick = function(){
+        CalculArticle(prix,17, 19);
     }
 
     function fraisPort(){
@@ -211,9 +217,9 @@ function CalculHT(){
     
     var message = document.querySelector("#promotion");
     
-
     function montantTTC() {
         var prixTTC = CalculHT() + TVA() + fraisPort();
+        prixTTC.toFixed(2);
         var prixPromo = prixTTC * 5 / 100;
         if(prixTTC >= 1000){
             message.innerHTML = "N.B Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de : " + prixPromo.toFixed(2) +  " € répresentant <span>5</span>% de votre commande ci-dessus";
@@ -228,22 +234,29 @@ function CalculHT(){
         console.log(montantTTC);
     }
 
+    message.onclick = function () {
+        message.style.display = "none";
+    }
+
     var span = document.querySelectorAll("footer strong");
 
     quantite[0].onkeyup = function(){
         console.log(quantite[0].value);
         span[0].innerText = quantite[0].value;
     }
-    quantite[1].onkeyup = function(){
-        span[1].innerText = quantite[0].value;
-    }
     quantite[2].onkeyup = function(){
-        span[2].innerText = quantite[0].value;
+        span[1].innerText = quantite[2].value;
+    }
+    quantite[3].onkeyup = function(){
+        span[2].innerText = quantite[3].value;
     }
     
     
-    
+    var button = document.querySelector('button');
 
+    button.onclick = function () {
+        window.print();
+    }
 
 
     

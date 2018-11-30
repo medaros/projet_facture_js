@@ -35,24 +35,23 @@ body > p {
     transform: translateX(-50%);
     color: green;
     background: lightgreen;
-    padding: 30px;
+    padding: 15px;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     border-left: 10px solid green;
     margin:0;
-    width: calc(100% - 60px);
+    width: calc(100% - 30px);
+    display: none;
 }
 
 /* Button POUR MESSAGE DE REMISE SUR 100EUR */
 body > p:after {
     content: "x";
-    color: #fff;
-    background: rgb(54, 173, 54);
-    border-radius: 5px;
+    color: rgba(54, 173, 54, .7);
+    border-radius: 50%;
     font-size: 24px;
-    padding: 5px 10px;
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 50%;
     transform:translateY(-50%);
     cursor: pointer;
