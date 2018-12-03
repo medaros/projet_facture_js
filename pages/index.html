@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projet Facture</title>
+    <!-- Notre CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
     <header>
+        <!-- logo -->
         <div id="logo">
 
         </div>
-
+        <!-- Rensignements de la societe -->
         <div id="infos">
             <div>
                 <input type="text" placeholder="Nom de la societe">
@@ -24,7 +26,7 @@
                 <input type="text" placeholder="Entrer votre adresse email">
             </div>
             <div>
-                <label>N° DE FACTURE </label> <input type="number" value="01">
+                <label>N° DE FACTURE </label> <input type="number" min="01" value="01">
             </div>
             <div>
                 <label>DATE</label>
@@ -44,11 +46,14 @@
         </div>
 
     </header>
+
+    <!-- titre -->
     <div class="mini-header">
         <h1>FACTURE</h1>
     </div>
 
     <section>
+        <!-- A -->
         <div>
             <h3>A</h3>
             <select name="" id="">
@@ -65,6 +70,7 @@
             <input type="text" id="a_tel" placeholder="Numéro de téléphone">
         </div>
 
+        <!-- Expedier A: -->
         <div>
             <h3>EXPEDIER A</h3>
             <select>
@@ -83,6 +89,7 @@
         </div>
     </section>
 
+    <!-- Produit -->
     <section>
         <h2>Détails des produits facturés</h2>
         <table>
@@ -106,7 +113,7 @@
                     2 €90 / mois
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" min="0" value="1">
                 </td>
                 <td>
 
@@ -125,7 +132,7 @@
                     2 €90 / mois
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" min="0" value="1">
                 </td>
                 <td>
 
@@ -144,7 +151,7 @@
                     2 €90 / mois
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" min="0" value="1">
                 </td>
                 <td>
 
@@ -175,18 +182,25 @@
             </tr>
         </table>
     </section>
+
+    <!-- Message > 1000EUR  -->
     <p id="promotion">
     </p>
 
+    <!-- Chque dans le footer -->
     <footer>
-        <p>Veuillez rédiger tous les chèques à l'ordre de <strong>"Nom de la société"</strong> Pour toute question
-            concernant cette facture, veuillez contacter : <span>DUPONT</span> au <strong>01.25.65.78.96</strong> ou à
-            l'adresse <strong>"societe@supportclient.fr"</strong></p>
-        <h3>Nous vous remercions de votre confiance</h3>
+        <div>
+            <p>Veuillez rédiger tous les chèques à l'ordre de <strong>"Nom de la société"</strong> Pour toute question
+                concernant cette facture, veuillez contacter : <span>DUPONT</span> au <strong>01.25.65.78.96</strong>
+                ou à
+                l'adresse <strong>"societe@supportclient.fr"</strong></p>
+            <h3>Nous vous remercions de votre confiance</h3>
+        </div>
         <button>Imprimer cette page</button>
 
     </footer>
 
+    <!-- Notre Script -->
     <script src="../js/facture.js"></script>
 </body>
 

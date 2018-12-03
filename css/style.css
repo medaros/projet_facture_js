@@ -5,10 +5,6 @@
     justify-content: space-between;
 }
 
-.mini-header h1 {
-
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -16,9 +12,21 @@ html, body {
 
 footer button {
     border: 0;
-    background: none;
-    color: rgb(52, 52, 255);
-    text-decoration: underline;
+    background: linear-gradient(to bottom, #89216Baa, #DA4453);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #DA4453;
+    font-weight: bolder;
+    display: block;
+    margin:auto;
+    transition: .4s;
+}
+
+footer button:hover {
+    box-shadow: 0 0 10px #aaa;
+    border: 3px solid #89216Baa;
+
 }
 
 body {
@@ -42,6 +50,8 @@ body > p {
     margin:0;
     width: calc(100% - 30px);
     display: none;
+    animation-name: fade;
+    animation-duration: 1s;
 }
 
 /* Button POUR MESSAGE DE REMISE SUR 100EUR */
@@ -55,6 +65,11 @@ body > p:after {
     top: 50%;
     transform:translateY(-50%);
     cursor: pointer;
+}
+
+@keyframes fade {
+    from{transform: translate(-50%,-1000px);}
+    to {transform: translate(-50%,0);}
 }
 
 body, input, select {
@@ -337,10 +352,24 @@ section:last-of-type table td:last-of-type {
         width: 100%;
         background: #eee;
         border-radius: 5px;
+        font-weight: bold;
     } 
 
     section:nth-of-type(3) table tr:last-of-type td {
         background: #eee;
         border-radius: 0 0 5px 5px;
     } 
+}
+
+footer div {
+    border: 3px dashed #DA4453;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(255, 239, 213, 0.2);
+    border-radius: 5px;
+}
+
+footer div strong {
+    text-decoration: underline green;
 }
