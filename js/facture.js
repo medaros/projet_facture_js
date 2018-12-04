@@ -59,7 +59,7 @@ for (i = 1; i <= 12; i++) {
     mois.innerHTML += "<option>" + i + '</option>';
 }
 
-for (var i = a; i <= date.getFullYear() + 50; i++) {
+for (var i = a + 1; i <= date.getFullYear() + 50; i++) {
     annee.innerHTML += "<option>" + i + "</option>";
 }
 
