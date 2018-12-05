@@ -12,7 +12,10 @@ html, body {
 
 footer button {
     border: 0;
-    background: linear-gradient(to bottom, #89216Baa, #DA4453);
+    background: linear-gradient(#89216B, #DA4453);
+    /* background: -webkit-linear-gradient(to bottom, #89216Baa, #DA4453);
+    background: -moz-linear-gradient(to bottom, #89216Baa, #DA4453);
+    background: -ms-linear-gradient(to bottom, #89216Baa, #DA4453); */
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -74,6 +77,10 @@ body > p:after {
 
 body, input, select {
     font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#infos input::placeholder {
+    color:#fff;
 }
 
 ::placeholder {
