@@ -133,27 +133,28 @@ function Remplace(i) {
     prix = prixSpecial.replace("€", ".").replace('/ mois', "").replace(' ', '');
     CalculHT();
     TVA();
+    fraisPort();
     return prix;
 }
 
 // Calculer le prix Hors Tax de tous les articles
 function CalculHT() {
     var prixHT = Number(td[9].innerText) + Number(td[14].innerText) + Number(td[19].innerText);
-    td[21].innerHTML = prixHT.toFixed(2);
+    td[21].innerHTML = prixHT.toFixed(2) + " €";
     return prixHT;
 }
 
 // calculer la tva
 function TVA() {
     var prixTVA = CalculHT() * 20 / 100;
-    td[23].innerHTML = prixTVA.toFixed(2);
+    td[23].innerHTML = prixTVA.toFixed(2) + " €";
     return prixTVA;
 }
 
 // frais de port
 function fraisPort() {
-    var port = 10;
-    td[25].innerHTML = port + "€";
+    var port = TVA() * 10 / 100;
+    td[25].innerHTML = port.toFixed(2) + " €";
     return port;
 }
 
@@ -171,7 +172,7 @@ function montantTTC() {
         message.style.display = "none";
 
     }
-    td[27].innerHTML = prixTTC.toFixed(2) + "€";
+    td[27].innerHTML = prixTTC.toFixed(2) + " €";
     console.log(montantTTC);
 }
 
@@ -181,6 +182,7 @@ function CalculArticle(p, q, i) {
     montant = p * input;
     // td pour montant en euro pour chaque ligne
     td[i].innerHTML = montant.toFixed(2);
+    
     console.log(td[i]);
 
     // Appeler directement les autres functions pour eviter la repitition
