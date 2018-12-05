@@ -88,7 +88,7 @@ function remplissage(element, affecter, affecter2, affecter3, affecter4, affecte
     }
 }
 
-// Renseignements clients pré
+// Renseignements clients prédéfinie
 select[3].onclick = function () {
     remplissage(select, aNomSociete, aNom, aRue, aCp, atel, 3, "Nouveau client", "", "", "", "", "");
     remplissage(select, aNomSociete, aNom, aRue, aCp, atel, 3, "LePoleS", "Le Pole S", "Mohamed", "55 rue de Poissy", "78300, Poissy", " 01.02.03.04.05");
